@@ -47,6 +47,6 @@ Contributions are welcome! If you have your own Flutter UI concept or idea to sh
 
 ## License
 
-This repository is open-source and available under the (MIT License)[]. Feel free to use, modify, and share these concepts in your Flutter projects.
+This repository is open-source and available under the (MIT License)[https://github.com/sgc93/Flutter-Concepts-Library/blob/main/LICENSE]. Feel free to use, modify, and share these concepts in your Flutter projects.
 
 Happy Fluttering! 🚀
