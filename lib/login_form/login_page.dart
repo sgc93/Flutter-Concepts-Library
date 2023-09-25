@@ -68,10 +68,33 @@ class _LoginPageState extends State<LoginPage> {
   }
 
   Widget _logoImage() {
-    return Image.asset(
-      'assets/images/codeSpoon.png',
-      height: 100,
-      width: 200,
+    return Container(
+      padding: const EdgeInsets.all(10),
+      decoration: _boxShadow(),
+      child: ClipOval(
+        child: Image.asset(
+          'assets/images/codeSpoon.png',
+          height: 100,
+        ),
+      ),
+    );
+  }
+
+  _boxShadow() {
+    return BoxDecoration(
+      borderRadius: BorderRadius.circular(100),
+      boxShadow: [
+        BoxShadow(
+          color: Colors.grey.shade400,
+          offset: const Offset(5, 5),
+          blurRadius: 8,
+        ),
+        const BoxShadow(
+          color: Colors.white,
+          offset: Offset(-5, -5),
+          blurRadius: 8,
+        )
+      ],
     );
   }
 
