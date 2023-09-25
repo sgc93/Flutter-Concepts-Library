@@ -1,6 +1,6 @@
 mixin ValidateMixin {
   String? validateEmailField(String? value) {
-    if (!isEmpty(value)) {
+    if (isEmpty(value)) {
       return 'Email can\'t be empty!';
     } else if (!isValid(value)) {
       return 'Enter correct email format!';
@@ -18,7 +18,7 @@ mixin ValidateMixin {
   }
 
   String? validatePasswordField(String? value) {
-    if (!isEmpty(value)) {
+    if (isEmpty(value)) {
       return 'Password can\'t be empty!';
     } else if (!hasLength(value)) {
       return 'Password length must be >= 6.';
@@ -36,7 +36,7 @@ mixin ValidateMixin {
   }
 
   bool isEmpty(String? value) {
-    if (value?.isEmpty ?? true) {
+    if (value!.isEmpty) {
       return true;
     } else {
       return false;
