@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_concepts/login_form/components/buttons.dart';
-import 'package:flutter_concepts/login_form/components/fields.dart';
+import 'package:flutter_concepts/login_form/mixins/validate_mixin.dart';
 
 class LoginPage extends StatefulWidget {
   const LoginPage({super.key});
@@ -9,17 +9,8 @@ class LoginPage extends StatefulWidget {
   State<LoginPage> createState() => _LoginPageState();
 }
 
-class _LoginPageState extends State<LoginPage> {
+class _LoginPageState extends State<LoginPage> with ValidateMixin {
   final GlobalKey<FormState> _formKey = GlobalKey<FormState>();
-
-  final _textController = TextEditingController();
-  final _passwordController = TextEditingController();
-
-  final _emailKeyboard = TextInputType.emailAddress;
-  final _passwordKeyboard = TextInputType.text;
-
-  final IconData _emailIcon = Icons.email;
-  final IconData _passwordIcon = Icons.lock_open;
 
   final String _googleImgPath = 'assets/images/google.png';
   final String _githubImgPath = 'assets/images/github.png';
@@ -40,6 +31,8 @@ class _LoginPageState extends State<LoginPage> {
                 _horizontalSpacer(50),
                 _logoImage(),
                 _horizontalSpacer(50),
+                _wellcomeText(),
+                _horizontalSpacer(10),
                 _loginForm(),
                 _horizontalSpacer(25),
                 _resetPassword(),
@@ -60,21 +53,6 @@ class _LoginPageState extends State<LoginPage> {
             ),
           ),
         ),
-      ),
-    );
-  }
-
-  Widget _loginForm() {
-    return Form(
-      key: _formKey,
-      child: Column(
-        children: [
-          _wellcomeText(),
-          _horizontalSpacer(10),
-          _usernameField(),
-          _horizontalSpacer(10),
-          _passwordField(),
-        ],
       ),
     );
   }
@@ -124,6 +102,19 @@ class _LoginPageState extends State<LoginPage> {
     );
   }
 
+  Widget _loginForm() {
+    return Form(
+      key: _formKey,
+      child: Column(
+        children: [
+          _emailField(),
+          _horizontalSpacer(20),
+          _passwordField(),
+        ],
+      ),
+    );
+  }
+
   Widget _resetPassword() {
     return Padding(
       padding: const EdgeInsets.symmetric(horizontal: 25.0),
@@ -154,7 +145,12 @@ class _LoginPageState extends State<LoginPage> {
             const EdgeInsets.all(20),
           ),
         ),
-        onPressed: () {},
+        onPressed: () {
+          if (_formKey.currentState!.validate()) {
+            _formKey.currentState!.save();
+            _formKey.currentState!.reset();
+          }
+        },
         child: const Text(
           'SignIn',
           style: TextStyle(
@@ -209,25 +205,50 @@ class _LoginPageState extends State<LoginPage> {
     );
   }
 
-  Widget _usernameField() {
-    return Field(
-      controller: _textController,
-      hintText: 'Email',
-      labelText: 'Email',
-      obscureText: false,
-      keyboardType: _emailKeyboard,
-      iconData: _emailIcon,
+  _inputDecoration(String labelText, String hintText) {
+    return InputDecoration(
+      enabledBorder: const OutlineInputBorder(
+        borderSide: BorderSide(
+          color: Colors.white,
+        ),
+      ),
+      focusedBorder: OutlineInputBorder(
+        borderSide: BorderSide(
+          color: Colors.grey.shade400,
+        ),
+      ),
+      fillColor: Colors.grey.shade200,
+      filled: true,
+      hintText: hintText,
+      labelText: labelText,
+    );
+  }
+
+  Widget _emailField() {
+    return Padding(
+      padding: const EdgeInsets.symmetric(horizontal: 25),
+      child: TextFormField(
+        obscureText: false,
+        decoration: _inputDecoration('Email', 'Email'),
+        validator: validateEmailField,
+        onSaved: (newValue) {
+          print(newValue);
+        },
+      ),
     );
   }
 
   Widget _passwordField() {
-    return Field(
-      controller: _passwordController,
-      hintText: 'Password',
-      labelText: 'Password',
-      obscureText: true,
-      keyboardType: _passwordKeyboard,
-      iconData: _passwordIcon,
+    return Padding(
+      padding: const EdgeInsets.symmetric(horizontal: 25),
+      child: TextFormField(
+        obscureText: true,
+        decoration: _inputDecoration('Password', 'Password'),
+        validator: validatePasswordField,
+        onSaved: (newValue) {
+          print(newValue);
+        },
+      ),
     );
   }
 }
