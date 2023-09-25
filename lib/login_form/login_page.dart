@@ -64,7 +64,7 @@ class _LoginPageState extends State<LoginPage> {
     );
   }
 
-  _loginForm() {
+  Widget _loginForm() {
     return Form(
       key: _formKey,
       child: Column(
