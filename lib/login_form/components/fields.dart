@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 class Field extends StatelessWidget {
   final TextEditingController controller;
   final String hintText;
+  final String labelText;
   final bool obscureText;
   final TextInputType keyboardType;
   final IconData iconData;
@@ -11,6 +12,7 @@ class Field extends StatelessWidget {
     super.key,
     required this.controller,
     required this.hintText,
+    required this.labelText,
     required this.obscureText,
     required this.keyboardType,
     required this.iconData,
@@ -37,6 +39,7 @@ class Field extends StatelessWidget {
           fillColor: Colors.grey.shade200,
           filled: true,
           hintText: hintText,
+          labelText: labelText,
           // icon: Icon(iconData),
         ),
       ),
