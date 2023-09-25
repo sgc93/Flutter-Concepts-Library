@@ -10,6 +10,8 @@ class LoginPage extends StatefulWidget {
 }
 
 class _LoginPageState extends State<LoginPage> with ValidateMixin {
+  String? _password;
+  String? _email;
   final GlobalKey<FormState> _formKey = GlobalKey<FormState>();
 
   final String _googleImgPath = 'assets/images/google.png';
@@ -148,6 +150,8 @@ class _LoginPageState extends State<LoginPage> with ValidateMixin {
         onPressed: () {
           if (_formKey.currentState!.validate()) {
             _formKey.currentState!.save();
+            // here is a place to do something with entered values like auth
+            print('Entered values are $_email and $_password.');
             _formKey.currentState!.reset();
           }
         },
@@ -231,8 +235,8 @@ class _LoginPageState extends State<LoginPage> with ValidateMixin {
         obscureText: false,
         decoration: _inputDecoration('Email', 'Email'),
         validator: validateEmailField,
-        onSaved: (newValue) {
-          print(newValue);
+        onSaved: (email) {
+          _email = email;
         },
       ),
     );
@@ -245,8 +249,8 @@ class _LoginPageState extends State<LoginPage> with ValidateMixin {
         obscureText: true,
         decoration: _inputDecoration('Password', 'Password'),
         validator: validatePasswordField,
-        onSaved: (newValue) {
-          print(newValue);
+        onSaved: (password) {
+          _password = password;
         },
       ),
     );
