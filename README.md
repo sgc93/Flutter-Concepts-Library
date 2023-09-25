@@ -1,6 +1,6 @@
 # Flutter_Concepts_Library
 
-    Welcome to the Flutter Widgets, Concepts, and Ideas repository! Explore a collection of custom Flutter widgets, creative UI concepts, and practical implementation of useful ideas to level up your Flutter development skills.
+Welcome to the Flutter Widgets, Concepts, and Ideas repository! Explore a collection of custom Flutter widgets, creative UI concepts, and practical implementation of useful ideas to level up your Flutter development skills.
 
 ## Concepts Included
 
@@ -9,7 +9,7 @@
 
 ## Getting Started
 
-    To explore and use the Flutter UI concepts in this repository, follow these steps:
+To explore and use the Flutter UI concepts in this repository, follow these steps:
 
 1. Clone the repository to your local machine:
 
@@ -33,7 +33,7 @@
 
 ## Contributing
 
-    Contributions are welcome! If you have your own Flutter UI concept or idea to share, please consider contributing it to this repository. To contribute:
+Contributions are welcome! If you have your own Flutter UI concept or idea to share, please consider contributing it to this repository. To contribute:
 
 1.  Fork the repository.
 2.  Create a new branch for your concept:
@@ -47,6 +47,6 @@
 
 ## License
 
-    This repository is open-source and available under the (MIT License)[]. Feel free to use, modify, and share these concepts in your Flutter projects.
+This repository is open-source and available under the (MIT License)[]. Feel free to use, modify, and share these concepts in your Flutter projects.
 
 Happy Fluttering! 🚀
