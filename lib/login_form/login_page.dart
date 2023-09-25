@@ -10,6 +10,8 @@ class LoginPage extends StatefulWidget {
 }
 
 class _LoginPageState extends State<LoginPage> {
+  final GlobalKey<FormState> _formKey = GlobalKey<FormState>();
+
   final _textController = TextEditingController();
   final _passwordController = TextEditingController();
 
@@ -30,35 +32,49 @@ class _LoginPageState extends State<LoginPage> {
       backgroundColor: Colors.grey[300],
       body: SafeArea(
         child: Center(
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              _horizontalSpacer(50),
-              _logoImage(),
-              _horizontalSpacer(50),
-              _wellcomeText(),
-              _horizontalSpacer(25),
-              _usernameField(),
-              _horizontalSpacer(25),
-              _passwordField(),
-              _horizontalSpacer(25),
-              _resetPassword(),
-              _horizontalSpacer(25),
-              _sighInButton(deviceWidth),
-              _horizontalSpacer(50),
-              const Row(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  Text('Or continue with'),
-                ],
-              ),
-              _horizontalSpacer(50),
-              _socialMediaLink(),
-              _horizontalSpacer(50),
-              _registerButton(),
-            ],
+          child: SingleChildScrollView(
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              mainAxisSize: MainAxisSize.max,
+              children: [
+                _horizontalSpacer(50),
+                _logoImage(),
+                _horizontalSpacer(50),
+                _loginForm(),
+                _horizontalSpacer(25),
+                _resetPassword(),
+                _horizontalSpacer(25),
+                _sighInButton(deviceWidth),
+                _horizontalSpacer(50),
+                const Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    Text('Or continue with'),
+                  ],
+                ),
+                _horizontalSpacer(50),
+                _socialMediaLink(),
+                _horizontalSpacer(50),
+                _registerButton(),
+              ],
+            ),
           ),
         ),
+      ),
+    );
+  }
+
+  _loginForm() {
+    return Form(
+      key: _formKey,
+      child: Column(
+        children: [
+          _wellcomeText(),
+          _horizontalSpacer(10),
+          _usernameField(),
+          _horizontalSpacer(10),
+          _passwordField(),
+        ],
       ),
     );
   }
