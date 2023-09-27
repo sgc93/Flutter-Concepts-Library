@@ -4,14 +4,14 @@ Welcome to the Flutter Widgets, Concepts, and Ideas repository! Explore a collec
 
 ## Concepts Included
 
-- **Login Page UI Design** <br><br>
-  ![Login Page UI](https://github.com/sgc93/Flutter-Concepts-Library/blob/main/assets/screenshots/editedLoginPage.png)
+1. **Login Page UI Design** <br><br>
+  ![Login Page UI](https://github.com/sgc93/Flutter-Concepts-Library/blob/main/assets/screenshots/editedLoginPage.png) <br>
 
-- **Login Form Validation** <br><br>
-  ![Form validation](https://github.com/sgc93/Flutter-Concepts-Library/blob/main/assets/screenshots/form_validation.png)
+2. **Login Form Validation** <br><br>
+  ![Form validation](https://github.com/sgc93/Flutter-Concepts-Library/blob/main/assets/screenshots/form_validation.png) <br>
 
-- **SnackBar to Undo Deleting Action** <br><br>
-  ![Deleting and Undoing](https://github.com/sgc93/Flutter-Concepts-Library/blob/main/assets/screenshots/snackbar_widget.gif)
+3. **SnackBar to Undo Deleting Action** <br><br><br>
+  ![Deleting and Undoing](https://github.com/sgc93/Flutter-Concepts-Library/blob/main/assets/screenshots/snackbar_widget.gif) <br>
 
 
 
