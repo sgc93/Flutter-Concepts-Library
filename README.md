@@ -13,6 +13,8 @@ Welcome to the Flutter Widgets, Concepts, and Ideas repository! Explore a collec
 - **SnackBar to Undo Deleting Action**
   ![Deleting and Undoing](https://github.com/sgc93/Flutter-Concepts-Library/blob/main/assets/screenshots/snackbar_widget.gif)
 
+
+
 ## Getting Started
 
 To explore and use the Flutter UI concepts in this repository, follow these steps:
