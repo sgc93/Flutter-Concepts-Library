@@ -70,4 +70,28 @@ class _SnackBarWidgetState extends State<SnackBarWidget> {
       ),
     );
   }
+
+  void _displaySnackBar() {
+    SnackBar snackbar = SnackBar(
+      backgroundColor: Colors.deepPurple[500],
+      duration: const Duration(seconds: 3),
+      behavior: SnackBarBehavior.floating,
+      content: const Text(
+        'You are deleting an item.',
+        style: TextStyle(
+          fontWeight: FontWeight.bold,
+          fontSize: 16,
+        ),
+      ),
+      action: SnackBarAction(
+        label: 'undo',
+        onPressed: () {
+          setState(() {
+            _taskList.insert(deleteIndex, deletedItem);
+          });
+        },
+      ),
+    );
+    ScaffoldMessenger.of(context).showSnackBar(snackbar);
+  }
 }
