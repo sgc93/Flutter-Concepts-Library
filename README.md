@@ -13,7 +13,7 @@ Welcome to the Flutter Widgets, Concepts, and Ideas repository! Explore a collec
 3. **SnackBar to Undo Deleting Action** <br><br><br>
    ![Deleting and Undoing](https://github.com/sgc93/Flutter-Concepts-Library/blob/main/assets/screenshots/snackbar_widget.gif) <br>
 
-- **Menu with HiddenDrawerMenu Widget**
+- **Menu with HiddenDrawerMenu Widget** <br><br><br>
   ![HiddenDrawerMenu](https://github.com/sgc93/Flutter-Concepts-Library/blob/main/assets/screenshots/hidden_drawer_menu.gif)
 
 ## Getting Started
