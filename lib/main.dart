@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_concepts/snack_bar/snack_bar.dart';
+import 'package:flutter_concepts/hidden_drawer_menu/hidden_drawer.dart';
 
 void main() {
   runApp(const MyApp());
@@ -13,7 +13,7 @@ class MyApp extends StatelessWidget {
     return const MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Flutter Concepts Library',
-      home: SnackBarWidget(),
+      home: HiddenDrawer(),
     );
   }
 }
