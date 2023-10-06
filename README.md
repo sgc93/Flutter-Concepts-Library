@@ -25,6 +25,9 @@ Welcome to the Flutter Widgets, Concepts, and Ideas repository! Explore a collec
 https://github.com/sgc93/Flutter-Concepts-Library/assets/109880887/563e992c-8776-480e-934b-7a61b7b9e0d8
 
    b. Using the MediaQuery.of() method <br>
+
+https://github.com/sgc93/Flutter-Concepts-Library/assets/109880887/42cac667-c085-48a3-a7f3-5d56c0a1bae1
+
    
 ## Getting Started
 
