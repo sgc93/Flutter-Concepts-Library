@@ -7,7 +7,12 @@ class WhatsAppTab extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('WhatSap'),
+        backgroundColor: Colors.green,
+        title: const Text('WhatsApp'),
+        actions: const [
+          Icon(Icons.search),
+          Icon(Icons.more_vert),
+        ],
       ),
     );
   }
