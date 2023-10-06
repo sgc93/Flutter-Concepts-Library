@@ -46,21 +46,105 @@ class WhatsAppTab extends StatelessWidget {
   }
 
   TabBarView _getContents() {
-    return const TabBarView(
+    return TabBarView(
       children: [
-        Center(
+        const Center(
           child: Icon(Icons.camera_alt),
         ),
         Center(
-          child: Icon(Icons.chat),
+          child: _sampleChats(),
         ),
-        Center(
+        const Center(
           child: Text('Status'),
         ),
-        Center(
+        const Center(
           child: Icon(Icons.call),
         ),
       ],
+    );
+  }
+
+  _sampleChats() {
+    return ListView(
+      children: [
+        _getChat(
+          'assets/images/github.png',
+          'gitHubers',
+          'Sami: do you part man',
+          '3:45',
+        ),
+        _getChat(
+          'assets/images/codeSpoon.png',
+          'codeSpoon',
+          'Alex: what about the last matching ...',
+          '1:45',
+        ),
+        _getChat(
+          'assets/images/linkedIn.png',
+          'linkedIners',
+          'Sami: my profile is about ...',
+          '8:45',
+        ),
+        _getChat(
+          'assets/images/github.png',
+          'gitHubers',
+          'Sami: do you part man',
+          '3:45',
+        ),
+        _getChat(
+          'assets/images/github.png',
+          'gitHubers',
+          'Sami: do you part man',
+          '3:45',
+        ),
+        _getChat(
+          'assets/images/github.png',
+          'gitHubers',
+          'Sami: do you part man',
+          '3:45',
+        ),
+        _getChat(
+          'assets/images/github.png',
+          'gitHubers',
+          'Sami: do you part man',
+          '3:45',
+        ),
+        _getChat(
+          'assets/images/codeSpoon.png',
+          'codeSpoon',
+          'Alex: what about the last matching ...',
+          '1:45',
+        ),
+        _getChat(
+          'assets/images/google.png',
+          'Googlers',
+          'Sami: my profile is about ...',
+          '8:45',
+        ),
+      ],
+    );
+  }
+
+  _getChat(
+    imgAddress,
+    ppName,
+    latest,
+    time,
+  ) {
+    return Card(
+      child: ListTile(
+        leading: Container(
+          height: 50,
+          width: 50,
+          decoration: const BoxDecoration(
+            shape: BoxShape.circle,
+          ),
+          child: Image.asset(imgAddress),
+        ),
+        title: Text(ppName),
+        subtitle: Text(latest),
+        trailing: Text(time),
+      ),
     );
   }
 }
