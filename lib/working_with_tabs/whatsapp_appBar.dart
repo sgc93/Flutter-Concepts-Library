@@ -24,6 +24,7 @@ class WhatsAppTab extends StatelessWidget {
           ),
         ),
         body: _getContents(),
+        floatingActionButton: _addNewChatButton(),
       ),
     );
   }
@@ -72,54 +73,63 @@ class WhatsAppTab extends StatelessWidget {
           'gitHubers',
           'Sami: do you part man',
           '3:45',
+          3,
         ),
         _getChat(
           'assets/images/codeSpoon.png',
           'codeSpoon',
           'Alex: what about the last matching ...',
           '1:45',
+          0,
         ),
         _getChat(
           'assets/images/linkedIn.png',
           'linkedIners',
-          'Sami: my profile is about ...',
+          '...',
           '8:45',
+          35,
         ),
         _getChat(
           'assets/images/github.png',
           'gitHubers',
           'Sami: do you part man',
           '3:45',
+          0,
         ),
         _getChat(
           'assets/images/github.png',
           'gitHubers',
           'Sami: do you part man',
           '3:45',
+          0,
+        ),
+        _getChat(
+          'assets/images/github.png',
+          'gitHubers',
+          '...',
+          '3:45',
+          0,
         ),
         _getChat(
           'assets/images/github.png',
           'gitHubers',
           'Sami: do you part man',
           '3:45',
-        ),
-        _getChat(
-          'assets/images/github.png',
-          'gitHubers',
-          'Sami: do you part man',
-          '3:45',
+          0,
         ),
         _getChat(
           'assets/images/codeSpoon.png',
           'codeSpoon',
           'Alex: what about the last matching ...',
           '1:45',
+          3,
         ),
         _getChat(
           'assets/images/google.png',
           'Googlers',
           'Sami: my profile is about ...',
           '8:45',
+          0,
         ),
       ],
     );
@@ -130,6 +140,7 @@ class WhatsAppTab extends StatelessWidget {
     ppName,
     latest,
     time,
+    newChat,
   ) {
     return Card(
       child: ListTile(
@@ -142,8 +153,53 @@ class WhatsAppTab extends StatelessWidget {
           child: Image.asset(imgAddress),
         ),
         title: Text(ppName),
-        subtitle: Text(latest),
-        trailing: Text(time),
+        subtitle: latest == '...'
+            ? const Text(
+                'Typing ...',
+                style: TextStyle(
+                  color: Color.fromARGB(255, 4, 230, 11),
+                ),
+              )
+            : Text(latest),
+        trailing: newChat == 0
+            ? Text(time)
+            : Column(
+                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                children: [
+                  Text(
+                    time,
+                    style: const TextStyle(
+                      color: Colors.green,
+                      fontWeight: FontWeight.bold,
+                    ),
+                  ),
+                  Container(
+                    padding: const EdgeInsets.all(5),
+                    decoration: const BoxDecoration(
+                      color: Colors.green,
+                      shape: BoxShape.circle,
+                    ),
+                    child: Text(
+                      newChat.toString(),
+                      style: const TextStyle(
+                        color: Colors.white,
+                        fontWeight: FontWeight.bold,
+                      ),
+                    ),
+                  ),
+                ],
+              ),
+      ),
+    );
+  }
+
+  Widget _addNewChatButton() {
+    return FloatingActionButton(
+      backgroundColor: const Color.fromARGB(255, 6, 168, 12),
+      onPressed: () {},
+      child: Transform.rotate(
+        angle: 135,
+        child: const Icon(Icons.chat_sharp),
       ),
     );
   }
