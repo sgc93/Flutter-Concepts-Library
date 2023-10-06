@@ -11,15 +11,25 @@ class _HomePageState extends State<HomePage> {
   int currentBarIndex = 0;
   int currentRailIndex = 0;
 
+  final int widthBreakPoint = 700;
+
   @override
   Widget build(BuildContext context) {
     double deviceWidth = MediaQuery.of(context).size.width;
     double deviceHeight = MediaQuery.of(context).size.height;
-    return deviceWidth < 500
+    return deviceWidth < widthBreakPoint
         ? Scaffold(
+            backgroundColor: Colors.blue[200],
             appBar: _appBar(deviceWidth, deviceHeight),
             body: Center(
-              child: Text('Dimension = $deviceWidth X $deviceHeight'),
+              child: Text(
+                'Dimension = ${deviceWidth.round()} X ${deviceHeight.round()}',
+                style: const TextStyle(
+                  color: Colors.white,
+                  fontWeight: FontWeight.bold,
+                  fontSize: 23,
+                ),
+              ),
             ),
             bottomNavigationBar: _navigationBar(),
           )
@@ -30,7 +40,8 @@ class _HomePageState extends State<HomePage> {
               children: [
                 _navigationRail(),
                 Center(
-                  child: Text('Dimension = $deviceWidth X $deviceHeight'),
+                  child: Text(
+                      'Dimension = ${deviceWidth.round()} X ${deviceHeight.round()}'),
                 ),
               ],
             ),
@@ -50,15 +61,22 @@ class _HomePageState extends State<HomePage> {
         NavigationDestination(icon: Icon(Icons.school), label: 'SCHOOL'),
       ],
       selectedIndex: currentBarIndex,
+      backgroundColor: Colors.blue,
+      indicatorColor: Colors.white,
     );
   }
 
   _appBar(deviceWidth, deviceHeight) {
     return AppBar(
       title: Text(
-        deviceWidth > 500 ? 'Desktop Layout' : 'Mobile Layout',
+        deviceWidth > widthBreakPoint ? 'DESKTOP LAYOUT' : 'MOBILE LAYOUT',
       ),
-      backgroundColor: deviceWidth > 500 ? Colors.deepPurple : Colors.amber,
+      leading: Icon(
+        deviceWidth > widthBreakPoint
+            ? Icons.desktop_mac
+            : Icons.mobile_friendly,
+      ),
+      backgroundColor: Colors.blue,
     );
   }
 
