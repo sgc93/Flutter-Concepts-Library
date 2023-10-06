@@ -8,8 +8,7 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
-  int currentBarIndex = 0;
-  int currentRailIndex = 0;
+  int currentIndex = 0;
 
   final int widthBreakPoint = 700;
 
@@ -41,7 +40,7 @@ class _HomePageState extends State<HomePage> {
               children: [
                 _navigationRail(),
                 Padding(
-                  padding: const EdgeInsets.all(38.0),
+                  padding: const EdgeInsets.only(right: 300),
                   child: Center(
                     child: Text(
                       'Dimension = ${deviceWidth.round()} X ${deviceHeight.round()}',
@@ -62,7 +61,7 @@ class _HomePageState extends State<HomePage> {
     return NavigationBar(
       onDestinationSelected: (int index) {
         setState(() {
-          currentBarIndex = index;
+          currentIndex = index;
         });
       },
       destinations: const [
@@ -70,7 +69,7 @@ class _HomePageState extends State<HomePage> {
         NavigationDestination(icon: Icon(Icons.business), label: 'BUSINESS'),
         NavigationDestination(icon: Icon(Icons.school), label: 'SCHOOL'),
       ],
-      selectedIndex: currentBarIndex,
+      selectedIndex: currentIndex,
       backgroundColor: Colors.blue,
       indicatorColor: Colors.white,
     );
@@ -94,7 +93,7 @@ class _HomePageState extends State<HomePage> {
     return NavigationRail(
       onDestinationSelected: (index) {
         setState(() {
-          currentRailIndex = index;
+          currentIndex = index;
         });
       },
       destinations: const [
@@ -104,7 +103,7 @@ class _HomePageState extends State<HomePage> {
         NavigationRailDestination(
             icon: Icon(Icons.school), label: Text('SCHOOL')),
       ],
-      selectedIndex: currentRailIndex,
+      selectedIndex: currentIndex,
       labelType: NavigationRailLabelType.selected,
       backgroundColor: Colors.blue,
       selectedLabelTextStyle: const TextStyle(color: Colors.white),
