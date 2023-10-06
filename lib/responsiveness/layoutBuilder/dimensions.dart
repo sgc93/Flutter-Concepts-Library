@@ -1,4 +1,4 @@
 // dimensions for breakpoints
 
-double widthBreakPoint = 500;
+double widthBreakPoint = 800;
 double heightBreakPoint = 700;
