@@ -19,6 +19,9 @@ Welcome to the Flutter Widgets, Concepts, and Ideas repository! Explore a collec
 5 **Working with Tabs** <br><br><br>
 ![HiddenDrawerMenu](https://github.com/sgc93/Flutter-Concepts-Library/blob/main/assets/screenshots/tab_bar_onWhatsApp.png) <br>
 
+6 **Responsive Design** <br><br><br>
+![With LayoutBuilder](https://clipchamp.com/watch/iDiszecOaYk) <br>
+
 ## Getting Started
 
 To explore and use the Flutter UI concepts in this repository, follow these steps:
