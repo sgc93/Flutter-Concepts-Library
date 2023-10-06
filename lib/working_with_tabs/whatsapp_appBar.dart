@@ -11,7 +11,7 @@ class WhatsAppTab extends StatelessWidget {
       child: Scaffold(
         appBar: AppBar(
           elevation: 3,
-          backgroundColor: Colors.green,
+          backgroundColor: const Color.fromRGBO(40, 209, 70, 1),
           title: const Text('WhatsApp'),
           actions: const [
             Icon(Icons.search),
@@ -157,7 +157,7 @@ class WhatsAppTab extends StatelessWidget {
             ? const Text(
                 'Typing ...',
                 style: TextStyle(
-                  color: Color.fromARGB(255, 4, 230, 11),
+                  color: Color.fromRGBO(0, 255, 47, 1),
                 ),
               )
             : Text(latest),
