@@ -20,6 +20,7 @@ class WhatsAppTab extends StatelessWidget {
             tabs: _getTabs(),
           ),
         ),
+        body: _getContents(),
       ),
     );
   }
@@ -39,5 +40,24 @@ class WhatsAppTab extends StatelessWidget {
         child: Text('CALLS'),
       ),
     ];
+  }
+
+  TabBarView _getContents() {
+    return const TabBarView(
+      children: [
+        Center(
+          child: Icon(Icons.camera_alt),
+        ),
+        Center(
+          child: Icon(Icons.chat),
+        ),
+        Center(
+          child: Text('Status'),
+        ),
+        Center(
+          child: Icon(Icons.call),
+        ),
+      ],
+    );
   }
 }
