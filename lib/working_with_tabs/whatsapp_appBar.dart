@@ -10,6 +10,7 @@ class WhatsAppTab extends StatelessWidget {
       length: 4,
       child: Scaffold(
         appBar: AppBar(
+          elevation: 3,
           backgroundColor: Colors.green,
           title: const Text('WhatsApp'),
           actions: const [
@@ -18,6 +19,8 @@ class WhatsAppTab extends StatelessWidget {
           ],
           bottom: TabBar(
             tabs: _getTabs(),
+            indicatorColor: Colors.white,
+            indicatorWeight: 6,
           ),
         ),
         body: _getContents(),
