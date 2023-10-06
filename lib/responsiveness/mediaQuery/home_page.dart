@@ -34,14 +34,24 @@ class _HomePageState extends State<HomePage> {
             bottomNavigationBar: _navigationBar(),
           )
         : Scaffold(
+            backgroundColor: Colors.blue[200],
             appBar: _appBar(deviceWidth, deviceHeight),
             body: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 _navigationRail(),
-                Center(
-                  child: Text(
-                      'Dimension = ${deviceWidth.round()} X ${deviceHeight.round()}'),
+                Padding(
+                  padding: const EdgeInsets.all(38.0),
+                  child: Center(
+                    child: Text(
+                      'Dimension = ${deviceWidth.round()} X ${deviceHeight.round()}',
+                      style: const TextStyle(
+                        color: Colors.white,
+                        fontWeight: FontWeight.bold,
+                        fontSize: 23,
+                      ),
+                    ),
+                  ),
                 ),
               ],
             ),
@@ -96,6 +106,8 @@ class _HomePageState extends State<HomePage> {
       ],
       selectedIndex: currentRailIndex,
       labelType: NavigationRailLabelType.selected,
+      backgroundColor: Colors.blue,
+      selectedLabelTextStyle: const TextStyle(color: Colors.white),
     );
   }
 }
