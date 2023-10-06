@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_concepts/hidden_drawer_menu/hidden_drawer.dart';
+import 'package:flutter_concepts/working_with_tabs/whatsap_tabs.dart';
 
 void main() {
   runApp(const MyApp());
@@ -13,7 +13,7 @@ class MyApp extends StatelessWidget {
     return const MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Flutter Concepts Library',
-      home: HiddenDrawer(),
+      home: WhatSapTab(),
     );
   }
 }
