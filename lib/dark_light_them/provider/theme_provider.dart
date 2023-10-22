@@ -13,9 +13,9 @@ class ThemeProvider with ChangeNotifier {
 
   void toggleTheme() {
     if (_theme == MyTheme.lightTheme) {
-      _theme = MyTheme.darkTheme;
+      setTheme = MyTheme.darkTheme;
     } else {
-      _theme = MyTheme.lightTheme;
+      setTheme = MyTheme.lightTheme;
     }
   }
 }
