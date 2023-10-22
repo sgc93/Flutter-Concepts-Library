@@ -32,6 +32,7 @@ dependencies:
   flutter:
     sdk: flutter
   hidden_drawer_menu: ^3.0.1
+  provider: ^6.0.5
 
 dev_dependencies:
   # The "flutter_lints" package below contains a set of recommended lints to
