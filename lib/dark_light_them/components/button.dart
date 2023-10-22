@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_concepts/dark_light_them/provider/theme_provider.dart';
+import 'package:provider/provider.dart';
 
 class GestureBtn extends StatelessWidget {
   final Widget child;
@@ -9,8 +11,11 @@ class GestureBtn extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final themeProvider = Provider.of<ThemeProvider>(context);
     return GestureDetector(
-      onTap: () {},
+      onTap: () {
+        themeProvider.toggleTheme();
+      },
       child: Container(
         height: 150,
         width: 150,
