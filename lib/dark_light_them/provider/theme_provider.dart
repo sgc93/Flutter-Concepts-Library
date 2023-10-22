@@ -2,13 +2,11 @@ import 'package:flutter/material.dart';
 import 'package:flutter_concepts/dark_light_them/theme/my_theme.dart';
 
 class ThemeProvider with ChangeNotifier {
-  ThemeData _theme = MyTheme.lightTheme;
+  ThemeData _theme = MyTheme.darkTheme;
 
-  get getTheme {
-    return _theme;
-  }
+  get getTheme => _theme;
 
-  set setTheme(theme) {
+  set setTheme(ThemeData theme) {
     _theme = theme;
     notifyListeners();
   }
