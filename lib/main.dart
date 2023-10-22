@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_concepts/responsiveness/layoutBuilder/home_page.dart';
+import 'package:flutter_concepts/dark_light_them/screen.dart';
 
 void main() {
   runApp(const MyApp());
@@ -14,7 +14,7 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: 'Flutter Concepts Library',
       theme: ThemeData(primarySwatch: Colors.deepPurple),
-      home: const HomePage(),
+      home: const HomeScreen(),
     );
   }
 }
