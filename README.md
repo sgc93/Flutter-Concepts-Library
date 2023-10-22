@@ -14,21 +14,23 @@ Welcome to the Flutter Widgets, Concepts, and Ideas repository! Explore a collec
    ![Deleting and Undoing](https://github.com/sgc93/Flutter-Concepts-Library/blob/main/assets/screenshots/snackbar_widget.gif) <br>
 
 4. **Menu with HiddenDrawerMenu Widget** <br><br><br>
-![HiddenDrawerMenu](https://github.com/sgc93/Flutter-Concepts-Library/blob/main/assets/screenshots/hidden_drawer_menu.gif)
+   ![HiddenDrawerMenu](https://github.com/sgc93/Flutter-Concepts-Library/blob/main/assets/screenshots/hidden_drawer_menu.gif)
 
 5. **Working with Tabs** <br><br><br>
-![HiddenDrawerMenu](https://github.com/sgc93/Flutter-Concepts-Library/blob/main/assets/screenshots/tab_bar_onWhatsApp.png) <br>
+   ![Working with tabs](https://github.com/sgc93/Flutter-Concepts-Library/blob/main/assets/screenshots/tab_bar_onWhatsApp.png) <br>
 
 6. **Responsive Design** <br><br>
    a. Using the LayoutBuilder Widget <br>
-   
+
 https://github.com/sgc93/Flutter-Concepts-Library/assets/109880887/563e992c-8776-480e-934b-7a61b7b9e0d8
 
-   b. Using the MediaQuery.of() method <br>
+b. Using the MediaQuery.of() method <br>
 
 https://github.com/sgc93/Flutter-Concepts-Library/assets/109880887/42cac667-c085-48a3-a7f3-5d56c0a1bae1
 
-   
+7. **Dark and Light Mode** <br><br><br>
+   ![Dark and light mode](https://github.com/sgc93/Flutter-Concepts-Library/blob/main/assets/screenshots/dark_light_theme.png) <br>
+
 ## Getting Started
 
 To explore and use the Flutter UI concepts in this repository, follow these steps:
