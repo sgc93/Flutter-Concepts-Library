@@ -9,4 +9,13 @@ class MyTheme {
       background: Colors.grey.shade200,
     ),
   );
+
+  static final ThemeData darkTheme = ThemeData(
+    brightness: Brightness.dark,
+    colorScheme: ColorScheme.highContrastDark(
+      primary: Colors.grey.shade400,
+      secondary: Colors.grey.shade900,
+      background: Colors.grey.shade900,
+    ),
+  );
 }
