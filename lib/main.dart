@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_concepts/dark_light_them/provider/theme_provider.dart';
 import 'package:flutter_concepts/dark_light_them/screen.dart';
-import 'package:flutter_concepts/dark_light_them/theme/my_theme.dart';
 import 'package:provider/provider.dart';
 
 void main() {
@@ -16,11 +15,11 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final theme = Provider.of<ThemeProvider>(context);
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Flutter Concepts Library',
-      theme: MyTheme.lightTheme,
-      darkTheme: MyTheme.darkTheme,
+      theme: theme.getTheme,
       home: const HomeScreen(),
     );
   }
