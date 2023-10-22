@@ -14,7 +14,7 @@ class Box extends StatelessWidget {
         width: 300,
         height: 300,
         decoration: BoxDecoration(
-          color: Colors.grey.shade900,
+          color: Theme.of(context).colorScheme.primary,
           borderRadius: BorderRadius.circular(23),
         ),
         child: Center(child: child),

@@ -8,13 +8,14 @@ class HomeScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.grey.shade200,
+      backgroundColor: Theme.of(context).colorScheme.background,
       appBar: AppBar(
-        backgroundColor: Colors.grey.shade900,
+        elevation: 0,
+        backgroundColor: Theme.of(context).colorScheme.background,
         title: Text(
-          'Theme Mode',
+          'Dark and Light Theme',
           style: TextStyle(
-            color: Colors.grey.shade200,
+            color: Theme.of(context).colorScheme.primary,
           ),
         ),
       ),
@@ -24,7 +25,7 @@ class HomeScreen extends StatelessWidget {
             'Change Theme',
             textAlign: TextAlign.center,
             style: TextStyle(
-              color: Colors.grey.shade900,
+              color: Theme.of(context).colorScheme.primary,
               fontSize: 16,
               fontWeight: FontWeight.bold,
             ),

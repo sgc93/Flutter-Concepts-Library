@@ -15,7 +15,7 @@ class GestureBtn extends StatelessWidget {
         height: 150,
         width: 150,
         decoration: BoxDecoration(
-          color: Colors.grey.shade400,
+          color: Theme.of(context).colorScheme.secondary,
           borderRadius: BorderRadius.circular(23),
         ),
         child: Center(child: child),
